@@ -72,7 +72,7 @@
             var subject = document.getElementById('subject').value;
             var message = document.getElementById('message').value;
 
-            var mailtoLink = `mailto:notificationsks@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(Message:\n${message}`)}`;
+          var mailtoLink = `mailto:notificationsks@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
             window.location.href = mailtoLink;
         }
 
