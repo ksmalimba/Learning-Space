@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Package</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tutor Package</h1>
+        <form id="package-form">
+            <div class="form-group">
+                <label for="subjects">Subjects:</label>
+                <select id="subjects" name="subjects">
+                    <option value="math">Math</option>
+                    <option value="science">Science</option>
+                    <option value="english">English</option>
+                    <!-- Add more subjects as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="lessons">Number of Lessons per Month:</label>
+                <input type="number" id="lessons" name="lessons" min="1" max="20">
+            </div>
+            <div class="form-group">
+                <label>Lesson Mode:</label>
+                <div class="radio-group">
+                    <input type="radio" id="inperson" name="mode" value="inperson">
+                    <label for="inperson">In-person</label>
+                    <input type="radio" id="online" name="mode" value="online">
+                    <label for="online">Online</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="start-time">Start Time:</label>
+                <select id="start-time-hour" name="start-time-hour">
+                    <!-- Hour options -->
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <!-- Add more hour options as needed -->
+                </select>
+                <select id="start-time-minute" name="start-time-minute">
+                    <!-- Minute options -->
+                    <option value="00">00</option>
+                    <option value="15">15</option>
+                    <!-- Add more minute options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="end-time">End Time:</label>
+                <select id="end-time-hour" name="end-time-hour">
+                    <!-- Hour options -->
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <!-- Add more hour options as needed -->
+                </select>
+                <select id="end-time-minute" name="end-time-minute">
+                    <!-- Minute options -->
+                    <option value="00">00</option>
+                    <option value="15">15</option>
+                    <!-- Add more minute options as needed -->
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

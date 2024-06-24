@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Learning Space</h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./subjects.html">Subjects</a></li>
+                    <li><a href="./noticeboard.html">Notice Board</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="slideshow">
+        <div class="slider">
+                <img src="./bws-maths-tutoring.jpg" alt="Image 2">
+            <img src="./download.webp" alt="Image 3">
+            <img src="./rs=w_1240,h_620,cg_true.webp" alt="Image 1">
+            <img src="./istockphoto-1363276509-612x612.jpg" alt="Image 3">
+            <img src="./1000_F_211093688_VxnqE7thRGOeeMHElz0BFaIaSSSdf210.jpg" alt="Image 1">
+            <img src="./240_F_86797297_Bzy8K4MHrwyuOHwRJFuXGu69GTgoXVdZ.jpg" alt="Image 3">
+            <img src="./mlp-04-01-programming_delphi.jpg" alt="Image 1">
+            <img src="./Java_0.jpg" alt="Image 1">
+            <img src="./BH-Website-Home-Page-Design-10.08-20-1.png" alt="Image 1">
+            <img src="./CAPS-256x256.jpg" alt="Image 1">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <div class="container">
+        <section class="contact-section">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions or would like to get in touch with us, please fill out the form below and choose an option to contact us via email or WhatsApp.</p>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="button" onclick="sendEmail()">Send via Email
+                    <img src="./gmail.png" alt="Email" class="contact-icon"></button>
+                <button type="button" onclick="sendWhatsApp()">Send via WhatsApp
+                    <img src="./WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+                </button>
+             
+
+            </form>
+        </section>
+    </div>
+   
+
+    <script>
+        function sendEmail() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            var mailtoLink = `mailto:your-email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            window.location.href = mailtoLink;
+        }
+
+        function sendWhatsApp() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            var whatsappMessage = `Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+            var whatsappLink = `https://wa.me/+27765334179?text=${whatsappMessage}`;
+            window.open(whatsappLink, '_blank');
+        }
+    </script>
+</body>
+</html>
